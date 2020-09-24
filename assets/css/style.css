@@ -18,6 +18,7 @@ body {
   line-height: 1.4;
   color: #535353;
 }
+
 #faculties {
   width: 100%;
 }
@@ -48,6 +49,7 @@ ul.list-grid {
 .list-item:hover .link::before {
   height: 1rem;
 }
+
 .list-item:hover .link::after {
   height: 100%;
 }
@@ -55,16 +57,15 @@ ul.list-grid {
 .list-item:hover .content-title {
   color: #fff;
 }
+
 .list-content {
   width: 100%;
 }
 
 .list-content .link {
+  /* border: 1px solid black; */
+  width: calc(25% - 1rem);
   display: flex;
-  /* min-width: calc(300px - 2rem);
-  min-height: calc(300px - 2rem); */
-  width: auto;
-  height: auto;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
@@ -82,6 +83,7 @@ ul.list-grid {
   transition: 0.3s ease;
   z-index: 2;
 }
+
 .list-content .link::after {
   content: '';
   position: absolute;
@@ -93,68 +95,87 @@ ul.list-grid {
   transition: 0.3s ease;
   z-index: 1;
 }
+
 .content-icon {
-  margin-top: 20px;
-  width: 7rem;
-  height: 7rem;
+  margin-top: 1.5rem;
+
   text-align: center;
   z-index: 20;
 }
 
 .content-icon svg {
   fill: var(--bg-brown);
+  width: 4rem;
+  height: 4rem;
 }
+
 .list-content .content-title {
+  padding: 1rem;
+  margin-bottom: 2rem;
   color: #453d48;
   font-weight: bold;
   font-size: 1rem;
-
-  margin-top: 1.5rem;
   z-index: 20;
 }
 
 .list-content .content-title::after {
   content: '';
   position: absolute;
-  top: 80%;
+  bottom: 1.5rem;
   left: 50%;
   height: 0.5rem;
-  width: 20px;
+  width: 1rem;
   background: #b7924b;
   transform: translateX(-50%);
 }
+
+
+/* Mobile Screen */
 @media screen and (max-width: 400px) {
   .section-wrapper {
     width: 95vw;
   }
+
   ul.list-grid {
     margin: 1rem 0;
   }
+
   .list-item {
     margin: 5px;
     width: 100%;
+
   }
+
   .list-content .link {
     flex-direction: row;
     align-items: center;
-    height: auto;
+    min-height: 76px;
   }
+
   .list-content {
-    padding: 0 20px 20px;
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
   }
 
   .list-content .content-title {
-    margin-left: 10px;
-    margin-top: 15px;
+    margin: 0
   }
+
   .list-content .content-title::after {
     display: none;
   }
+
   .content-icon {
-    width: 3rem;
-    height: 3rem;
+    margin: 0;
     /* margin: 0 20px; */
   }
+
+  .content-icon svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
   ul.list-grid {
     justify-content: center;
   }
