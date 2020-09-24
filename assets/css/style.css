@@ -38,12 +38,14 @@ ul.list-grid {
 }
 
 .list-item {
+
   list-style: none;
   position: relative;
-  /* background-color: #fff; */
   background: #f7f7f7;
   margin-top: 1rem;
-  /* display: flex; */
+  overflow: hidden;
+  height: 204px;
+
 }
 
 .list-item:hover .link::before {
@@ -64,7 +66,7 @@ ul.list-grid {
 
 .list-content .link {
   /* border: 1px solid black; */
-  width: calc(25% - 1rem);
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,10 +142,8 @@ ul.list-grid {
     margin: 1rem 0;
   }
 
-  .list-item {
-    margin: 5px;
-    width: 100%;
-
+  ul.list-grid .list-item {
+    width: calc(100% - 1rem);
   }
 
   .list-content .link {
@@ -182,8 +182,8 @@ ul.list-grid {
 }
 
 @media screen and (min-width: 768px) {
-  .list-content .link {
-    min-width: calc(370px - 2rem);
+  .list-item {
+    width: calc(33% - 1rem);
   }
 }
 
@@ -192,8 +192,13 @@ ul.list-grid {
     width: 85vw;
   }
 
-  .list-content .link {
-    min-width: calc(360px - 2rem);
-    min-height: calc(360px - 2rem);
+  .list-item {
+    width: calc(25% - 1rem);
+
   }
+
+  .list-content .content-title {
+    text-align: center;
+  }
+
 }
