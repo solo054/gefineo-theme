@@ -47,6 +47,17 @@ ul.list-grid {
   margin: 0.5rem;
 }
 
+.svg-icon {
+  width: 70px;
+
+}
+
+.svg-icon path {
+
+  fill: red !important;
+
+}
+
 .list-item:hover .link::before {
   height: 1rem;
 }
@@ -142,12 +153,18 @@ ul.list-grid {
 
   ul.list-grid .list-item {
     width: calc(100% - 1rem);
+    margin: 2px;
   }
 
   .list-content .link {
     flex-direction: row;
     align-items: center;
     min-height: 76px;
+  }
+
+  .svg-icon {
+    width: 50px;
+
   }
 
   .list-content {
