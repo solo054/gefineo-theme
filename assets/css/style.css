@@ -33,7 +33,7 @@ ul.list-grid {
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* border: 1px solid salmon; */
 }
 
@@ -41,9 +41,10 @@ ul.list-grid {
   list-style: none;
   position: relative;
   background: #f7f7f7;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   overflow: hidden;
   /* height: 204px; */
+  margin: 0.5rem;
 }
 
 .list-item:hover .link::before {
@@ -199,8 +200,7 @@ ul.list-grid {
 }
 
 /* Large screen */
-@media (min-width: 992px) {
-}
+@media (min-width: 992px) {}
 
 /* Extra Large screen */
 @media (min-width: 1200px) {
